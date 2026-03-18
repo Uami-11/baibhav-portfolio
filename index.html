@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artist Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Pinyon+Script&family=Jost:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <!-- ✏️ Replace with your friend's name -->
+    <h1 class="artist-name">Artist Name</h1>
+    <nav>
+      <a href="#gallery" class="active">Portraits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="gallery">
+    <p class="gallery-label">Selected Works — 2023–2025</p>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </main>
+
+  <section id="contact">
+    <p class="contact-eyebrow">Get in touch</p>
+    <h2 class="contact-heading">Let's work together</h2>
+    <div class="contact-links">
+      <!-- ✏️ Replace with real email and phone -->
+      <a class="contact-link" href="mailto:hello@artistname.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="M2 7l10 7 10-7" />
+        </svg>
+        hello@artistname.com
+      </a>
+      <a class="contact-link" href="tel:+1234567890">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path
+            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+        </svg>
+        +1 234 567 890
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <!-- ✏️ Update year / name -->
+    &copy; 2025 Artist Name. All rights reserved.
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
+      <div class="modal-image-wrap">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <p class="modal-counter" id="modalCounter"></p>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-meta" id="modalMeta"></p>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-nav">
+          <button id="modalPrev">← Prev</button>
+          <button id="modalNext">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
